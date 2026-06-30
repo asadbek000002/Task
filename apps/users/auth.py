@@ -11,9 +11,8 @@ from passlib.context import CryptContext
 # SQLAlchemy
 from sqlalchemy.orm import Session
 
-from apps.users.models import User
-
 # Project
+from apps.users.models import User
 from core.database import get_db
 from core.settings import settings
 

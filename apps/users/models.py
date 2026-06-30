@@ -7,9 +7,8 @@ from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
-from apps.posts.schemas import FeedUserOut
-
 # Project
+from apps.posts.schemas import FeedUserOut
 from core.database import Base
 
 

@@ -10,6 +10,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from sqlalchemy import func, or_
 from sqlalchemy.orm import Session, joinedload, selectinload
 
+# Project
 from apps.posts.models import Comment, Like, Post
 from apps.posts.schemas import (
     FeedUserOut,
@@ -21,8 +22,6 @@ from apps.posts.schemas import (
 )
 from apps.users.auth import get_current_user, require_verified_user
 from apps.users.models import User
-
-# Project
 from core.database import get_db
 
 router = APIRouter()
