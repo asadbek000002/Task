@@ -47,8 +47,8 @@ ReDoc: http://localhost:8055/redoc
 ## Email Verification
 
 Ro‘yxatdan o‘tishda haqiqiy email manzil kiriting.
-
 Tizim foydalanuvchining email manziliga tasdiqlash havolasini yuboradi. Hisobni aktivlashtirish uchun emaildagi havolani ochish kerak.
+
 ---
 
 
