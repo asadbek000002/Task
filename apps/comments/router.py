@@ -1,8 +1,12 @@
+# Stdlib
 from datetime import datetime
 from typing import List
 from uuid import UUID
 
+# Fastapi
 from fastapi import APIRouter, Depends, HTTPException, Response
+
+# SQLAlchemy
 from sqlalchemy.orm import Session, selectinload
 
 from apps.comments.schemas import CommentCreate
@@ -10,6 +14,8 @@ from apps.posts.models import Comment, Post
 from apps.posts.schemas import CommentOut
 from apps.users.auth import get_current_user, require_verified_user
 from apps.users.models import User
+
+# Project
 from core.database import get_db
 
 router = APIRouter()

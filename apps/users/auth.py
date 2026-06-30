@@ -1,12 +1,19 @@
+# Stdlib
 from datetime import datetime, timedelta
 
 import jwt
+
+# Fastapi
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
+
+# SQLAlchemy
 from sqlalchemy.orm import Session
 
 from apps.users.models import User
+
+# Project
 from core.database import get_db
 from core.settings import settings
 

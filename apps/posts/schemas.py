@@ -1,9 +1,12 @@
+# Stdlib
 from datetime import datetime
 from typing import List
 from uuid import UUID
 
+# Pydantic
 from pydantic import BaseModel, field_validator
 
+# Project
 from apps.comments.schemas import CommentOut
 
 

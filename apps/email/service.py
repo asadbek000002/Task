@@ -1,8 +1,9 @@
-import smtplib
+# Stdlib
 from email.message import EmailMessage
 
 import aiosmtplib
 
+# Project
 from core.settings import settings
 
 

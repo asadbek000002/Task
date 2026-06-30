@@ -1,8 +1,12 @@
+# Stdlib
 from datetime import datetime
 from typing import List, Optional
 from uuid import UUID
 
+# Fastapi
 from fastapi import APIRouter, Depends, HTTPException, Query, Response
+
+# SQLAlchemy
 from sqlalchemy import func, or_
 from sqlalchemy.orm import Session, joinedload, selectinload
 
@@ -17,6 +21,8 @@ from apps.posts.schemas import (
 )
 from apps.users.auth import get_current_user, require_verified_user
 from apps.users.models import User
+
+# Project
 from core.database import get_db
 
 router = APIRouter()

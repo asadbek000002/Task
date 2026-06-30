@@ -1,9 +1,14 @@
+# Stdlib
 import unittest
 from unittest.mock import patch
 
+# Fastapi
 from fastapi.testclient import TestClient
+
+# SQLAlchemy
 from sqlalchemy import text
 
+# Project
 from core.database import engine
 from main import app
 

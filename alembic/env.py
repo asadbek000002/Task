@@ -1,10 +1,14 @@
+# Stdlib
 from logging.config import fileConfig
 
+# SQLAlchemy
 from sqlalchemy import engine_from_config, pool
 
 from alembic import context
 from apps.posts import models  # noqa
 from apps.users import models  # noqa
+
+# Project
 from core.database import Base
 
 # this is the Alembic Config object, which provides

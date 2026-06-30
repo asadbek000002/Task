@@ -1,8 +1,11 @@
+# Stdlib
 from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
+# Fastapi
 from fastapi import APIRouter, Depends, HTTPException, status
-from passlib.context import CryptContext
+
+# SQLAlchemy
 from sqlalchemy.orm import Session
 
 from apps.users.auth import get_current_user, hash_password, verify_password
@@ -15,6 +18,8 @@ from apps.users.schemas import (
     UpdateMeSchemaIn,
     UserSchemaOut,
 )
+
+# Project
 from core.database import get_db
 
 from .auth import create_access_token

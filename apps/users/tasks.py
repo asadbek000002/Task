@@ -1,9 +1,14 @@
+# Stdlib
 import asyncio
 from datetime import datetime, timezone
 
+# Celery
 from celery import shared_task
+
+# SQLAlchemy
 from sqlalchemy.orm import Session
 
+# Project
 from apps.email.service import send_verification_email
 from apps.users.models import User
 from core.celery import app

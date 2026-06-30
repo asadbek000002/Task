@@ -1,7 +1,9 @@
+# Stdlib
 import re
 from datetime import datetime
 from uuid import UUID
 
+# Pydantic
 from pydantic import BaseModel, ConfigDict, EmailStr, field_validator
 
 
