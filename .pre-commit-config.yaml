@@ -1,0 +1,39 @@
+repos:
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: isort (python imports)
+        language_version: python3.11
+        args: ["--profile", "black"]
+        exclude: |
+          ^alembic/
+          ^apps/migrations/
+          ^tests/
+
+
+  - repo: https://github.com/psf/black
+    rev: 23.7.0
+    hooks:
+      - id: black
+        name: black (python formatter)
+        language_version: python3.11
+        exclude: |
+          ^alembic/
+          ^apps/migrations/
+          ^tests/
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+
+  - repo: local
+    hooks:
+      - id: Backend-tests
+        name: Backend tests
+        entry: docker-compose run --rm -T web python -m unittest discover -s tests
+        language: system
+        pass_filenames: false
